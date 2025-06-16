@@ -1,93 +1,119 @@
-# React + Vite
+# 🦊 FoxGres EA – React Frontend Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is the official frontend UI for **FoxGres EA**, a MetaTrader 5 trading automation system, developed under the **Fox-In-The-Code** initiative.  
+It is designed with **React**, **JSX**, and **Vite**, styled using inline CSS and glassmorphism principles inspired by [Dribbble](https://dribbble.com/search/glassmorphism).  
+The frontend visualizes key moments in algorithmic trading: **Break of Structure (BOS)** → **Break & Retest (BRT)** → **Entry**.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-// MARKUS : //
-
-This project is part of a larger initiative under FoxInTheCode, combining AI, DevOps, and trading automation into one clean ecosystem.
-
-- I will start but configuring the REACT-project-structure to meet my goal of creating an UI for my FoxGres EA with REACT & .JSX and the App.jsx-file. The goal is to create an inline-JSX programme file that has CSS and media queries in it.
-
-- I will create a GitHub repository: https://github.com/ArcticCoderGuy/foxgres-frontend-REACT.git
-
-- Initialized a lical Git Repo "FOXGRES-FRONTEND:
-
-1. git init
-2. git add .
-3. git commit -m "Initial commit – FoxGres EA React project"
-4. git remote add origin https://github.com/ArcticCoderGuy/foxgres-frontend.git
-5. git branch -M main
-6. git push -u origin main
-
-# ⚙️ FoxGres EA – React Frontend Interface
-
-This project is a professional user interface for the **FoxGres Expert Advisor (EA)** – a trading automation system for MetaTrader 5. Built using **React** and **inline JSX**, the goal is to develop a clean, fast and fully responsive web application that visualizes and configures FoxGres EA strategies.
+---
 
 ## 🎯 Project Goals
 
-- 🧩 Create a modular **React frontend** using `.jsx` files
-- 💅 Apply **inline CSS** and **media queries** directly in JSX
-- 🔧 Build a flexible UI to interact with trading signals and automation logic
-- 📈 Prepare for eventual API integration with MetaTrader 5 backend
-- 🎨 Design for responsiveness and usability (desktop & mobile)
+- 🧩 Create a modular **React JSX** user interface
+- 💅 Style with **inline CSS** & **media queries**
+- 📈 Visualize key trading logic from MQL5-based FoxGres EA
+- 🔧 Prepare for **real-time signal** data via Python/MQL5 integration
+- 📱 Build both **desktop-first** and mobile-responsive UIs
+- 🧠 Integrate optional AI/ML pipeline for predictive signal boosting
+- 🚀 Deploy as a GitHub Pages app embedded into foxinthecode.fi
 
-## 📂 Tech Stack
+---
 
-| Technology | Purpose                                 |
-| ---------- | --------------------------------------- |
-| `React`    | UI framework                            |
-| `Vite`     | Lightning-fast dev environment          |
-| `JSX`      | Inline JavaScript + HTML for components |
-| `CSS`      | Styling with responsiveness             |
-| `GitHub`   | Version control & portfolio hosting     |
+## 📦 Tech Stack
 
-## 🚀 Setup & Installation
+| Technology    | Purpose                                |
+| ------------- | -------------------------------------- |
+| React         | UI Framework                           |
+| Vite          | Lightning-fast dev environment         |
+| JSX           | HTML + JS component structure          |
+| Inline CSS    | Component-based styling (with queries) |
+| GitHub        | Version control & CI/CD integration    |
+| Python (soon) | Back-end MQL5 signal bridge            |
+| MQL5          | Strategy logic from MT5 EA             |
 
-Clone the repo and install dependencies:
+---
+
+## 🛠 GitHub Setup
+
+Repository:  
+🔗 https://github.com/ArcticCoderGuy/foxgres-frontend-REACT.git
+
+Initialized locally:
 
 ```bash
-git clone https://github.com/ArcticCoderGuy/foxgres-frontend-REACT.git
-cd foxgres-frontend-REACT
-npm install
-npm run dev
+git init
+git add .
+git commit -m "Initial commit – FoxGres EA React project"
+git remote add origin https://github.com/ArcticCoderGuy/foxgres-frontend.git
+git branch -M main
+git push -u origin main
 
 
+foxgres-frontend/
+├── App.jsx               # Main App component
+├── index.jsx             # Root render logic
+├── components/
+│   ├── SignalCard.jsx    # BOS → BRT → Entry visual card
+│   ├── TradeStatusBar.jsx
+│   └── SettingsPanel.jsx
+├── assets/               # Images, logo (Fox-In-The-Code)
+└── styles/               # (Optional extra styles)
 
+ Next Steps (Milestone 1–5)
+🧱 Build App.jsx
+
+Hero section, initial layout
+
+Inline CSS + glassmorphism
+
+🧩 Add component views
+
+SignalCard.jsx
+
+SettingsPanel.jsx
+
+TradeStatusBar.jsx
+
+🔗 Back-end Integration
+
+Connect MQL5 signal stream → Python → React Props
+
+Use ADX > 25 and ATR for position sizing
+
+📱 Mobile Optimization
+
+Use Flexbox + media queries
+
+Preview in iOS & Android views
+
+🚀 Deployment
+
+npm run build → GitHub Pages
+
+Embed link to foxinthecode.fi
+
+
+🔮 Future AI/ML Ideas
+🧠 Add prediction layer with IQM Quantum API or TensorFlow
+
+📊 Generate probability scores per signal
+
+🎯 Use ADX + ATR + ML score for optimal entry
+
+💡 Portfolio Enhancer Tips
+Add these soon to boost impact:
+
+✅ Screenshots (Glassmorphic UI, BOS→BRT→Entry)
+
+🎬 Screencast (Loom/OBS showing workflow)
+
+🧠 Blog post about signal logic
+
+🔗 Embed to https://foxinthecode.fi/foxgres
+
+👤 Author
+Markus Kaprio
+Founder – Fox-In-The-Code
+🎓 Full-Stack DevOps Trainee | AI Trading Engineer
+🌍 Based in Tornio, Finland
+🔗 linkedin.com/in/markuskaprio | www.foxinthecode.fi
 ```
-
----
-
-## 🔜 **Seuraavat Vaiheet (1–5) projektissa:**
-
-1. **🧱 Rakenna `App.jsx` komponenttirunko**:
-
-   - Tee ensimmäinen näkymä, esim. hero-osio, kuva + otsikko + nappi
-   - Inline CSS, flex, media queries
-
-2. **🎨 Luo `assets/` kansio ja lisää kuvia/logoja**
-
-3. **🔁 Tee komponentteja** kuten:
-
-   - SignalView
-   - SettingsPanel
-   - TradeStatusBar
-
-4. **🚀 Aja `npm run build` kun valmis ja deployaa GitHub Pagesiin**
-
-5. **📤 Työnnä kaikki GitHub:iin ja upota live-linkki foxinthecode.fi-sivuston alasivuksi**
-
----
-
-🧙🏾‍♂️ **Synapse-vinkki:**  
-Tämä `README.md` toimii suoraan GitHubissa myös portfolion etusivuna. Lisää siihen videodemo ja screenshot, niin _portfolioarvo nousee heti +300 %_.
-
-Haluatko, että teen sinulle myös `index.jsx` ja `App.jsx` esimerkin inline-tyylillä seuraavaksi?

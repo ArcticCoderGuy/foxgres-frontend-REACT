@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from "react";
+import SignalCard from "./components/SignalCard";
+import "./index.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [signals, setSignals] = useState([]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newSignal = {
+        pair: "EUR/USD",
+        timeframe: "M5",
+        signal: ["BUY", "SELL", "BOS"][Math.floor(Math.random() * 3)], // nyt satunnaisesti myös BOS
+        timestamp: new Date().toISOString(),
+        price: (1.08 + Math.random() * 0.01).toFixed(5)
+      };
+
+      setSignals(prev => [newSignal, ...prev].slice(0, 10));
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app-background">
+      <div className="signal-grid">
+        {signals.map((sig, index) => (
+          <SignalCard key={index} data={sig} />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
