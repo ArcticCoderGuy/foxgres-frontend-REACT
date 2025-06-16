@@ -110,6 +110,43 @@ Add these soon to boost impact:
 
 🔗 Embed to https://foxinthecode.fi/foxgres
 
+# FoxGres SignalBoard 📈
+
+Tämä on reaaliaikainen signaalinäyttö, joka visualisoi kaupankäyntisignaaleja (BUY, SELL, BOS) tyylikkäällä Glassmorphism-tyylillä. Frontend on rakennettu Reactilla ja suunniteltu integroimaan MQL5-pohjaiseen kaupankäyntirobottiin.
+
+## 🔧 Teknologiat
+
+- ⚛️ React + Vite
+- 💅 CSS3 (glassmorphism, LED-indikaattorit)
+- 📄 Mockdata useEffect:llä (simuloidut signaalit)
+- 🖼️ Taustakuva: `bg-foxgres.png` (moderni tumma markkinaskene)
+- 📦 Komponenttirakenne: `SignalCard.jsx`, `App.jsx`
+
+## 📊 Komponenttien logiikka
+
+- `App.jsx` sisältää signaalisilmukan (3s välein uusi signaali)
+- `SignalCard.jsx` näyttää visuaalisen kortin:
+  - Vihreä tai punainen LED vasemmassa yläkulmassa
+  - BOS-toiminto oranssilla värillä (tunnistaa myös trendin muutoksen)
+  - Huurrelasi-efekti ja valaistuselementti
+
+## 🔌 Tuleva integraatio: MQL5 ➜ React
+
+Seuraavaksi lisätään backend (Node.js / Express), johon MQL5-signaalit lähetetään JSON-muodossa (esim. `POST /signal`). Frontend lukee nämä automaattisesti ja päivittää käyttöliittymän.
+
+## 🔮 Suunniteltu jatko
+
+- [ ] Webhook-rajapinta Node.js:llä signaalin vastaanottamiseen
+- [ ] WebSocket- tai polling-haku Reactin `useEffect()`-kautta
+- [ ] Backendin suojaus (API-key tai secret)
+- [ ] Mahdollisuus tallentaa signaalit tietokantaan (PostgreSQL)
+
+---
+
+🦊 Powered by **Fox-In-The-Code**. Tavoitteena automatisoitu kaupankäyntirobotti ja visuaalisesti huippuluokan kaupankäyntikokemus.
+
+
+
 👤 Author
 Markus Kaprio
 Founder – Fox-In-The-Code
